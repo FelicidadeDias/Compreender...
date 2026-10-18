@@ -6,14 +6,15 @@
 
     <title>Compreender Antes de Corrigir | Um Guia para Pais e Educadores</title>
 
-    <meta name="description" content="Descubra uma nova perspetiva sobre o comportamento infantil com o livro Compreender Antes de Corrigir, destinado a pais, professores e educadores.">
+    <meta name="description" content="Descubra o livro Compreender Antes de Corrigir. Uma leitura para pais e educadores que desejam refletir sobre o comportamento infantil. Consulte a oferta promocional de 6.500 Kz.">
 
     <meta name="theme-color" content="#071523">
 
     <meta property="og:title" content="Compreender Antes de Corrigir">
-    <meta property="og:description" content="Antes de corrigir, procure compreender. Conheça um recurso dedicado à reflexão sobre a educação e o comportamento infantil.">
-    <meta property="og:image" content="capa.png">
+    <meta property="og:description" content="Antes de corrigir, procure compreender. Conheça o livro para pais e educadores e consulte a oferta de 6.500 Kz.">
+    <meta property="og:image" content="https://felicidadedias.github.io/Compreender-Antes-de-Corrigir/capa.png">
     <meta property="og:type" content="product">
+    <meta property="og:locale" content="pt_AO">
 
     <link rel="icon" type="image/png" href="logo.png">
 
@@ -33,6 +34,8 @@
             --muted: #66788b;
             --light: #f5f8fb;
             --border: #e1e8f0;
+            --green: #16864a;
+            --green-light: #e7f8ed;
             --max-width: 1140px;
             --radius: 18px;
         }
@@ -96,7 +99,7 @@
         h3 {
             font-family: "Manrope", sans-serif;
             line-height: 1.2;
-            letter-spacing: -0.7px;
+            letter-spacing: -.7px;
         }
 
         h1 {
@@ -138,7 +141,8 @@
         }
 
         .light .eyebrow,
-        .book-section .eyebrow {
+        .book-section .eyebrow,
+        .audience .eyebrow {
             color: var(--blue);
         }
 
@@ -163,9 +167,9 @@
             justify-content: center;
             align-items: center;
             gap: 9px;
-            min-height: 48px;
+            min-height: 49px;
             max-width: 100%;
-            padding: 12px 19px;
+            padding: 13px 20px;
             border: 1px solid transparent;
             border-radius: 10px;
             font-size: 13px;
@@ -173,11 +177,19 @@
             line-height: 1.4;
             text-align: center;
             overflow-wrap: anywhere;
-            transition: background .2s, transform .2s;
+            cursor: pointer;
+            transition: background .2s, transform .2s, box-shadow .2s;
         }
 
         .btn:hover {
             transform: translateY(-2px);
+        }
+
+        .btn:focus-visible,
+        .menu-toggle:focus-visible,
+        .faq-question:focus-visible {
+            outline: 3px solid var(--cyan);
+            outline-offset: 4px;
         }
 
         .btn-primary {
@@ -188,6 +200,7 @@
 
         .btn-primary:hover {
             background: #8dcdff;
+            box-shadow: 0 10px 28px #62b6ff35;
         }
 
         .btn-outline {
@@ -198,6 +211,15 @@
         .btn-dark {
             background: var(--navy);
             color: white;
+        }
+
+        .btn-green {
+            background: var(--green);
+            color: white;
+        }
+
+        .btn-green:hover {
+            background: #116c3b;
         }
 
         .arrow {
@@ -418,6 +440,75 @@
             color: #b4c4d5;
             font-size: 10px;
             line-height: 1.5;
+        }
+
+        /* PREÇO */
+
+        .price-box {
+            margin: 25px 0 20px;
+            padding: 20px;
+            border: 1px solid #62b6ff42;
+            border-radius: 16px;
+            background: #ffffff08;
+        }
+
+        .price-label {
+            display: block;
+            color: #c5d7e8;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .price-line {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            margin-top: 5px;
+        }
+
+        .old-price {
+            color: #a4b4c5;
+            font-size: 19px;
+            text-decoration: line-through;
+            text-decoration-thickness: 2px;
+        }
+
+        .new-price {
+            color: var(--cyan);
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(31px, 4vw, 43px);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .discount-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 9px;
+            border-radius: 7px;
+            background: var(--green-light);
+            color: #126b39;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .price-saving {
+            margin-top: 8px;
+            color: #b8d5ed;
+            font-size: 11px;
+        }
+
+        .price-conditions {
+            margin-top: 9px;
+            color: #9eb0c2;
+            font-size: 10px;
+            line-height: 1.6;
+        }
+
+        .price-box .btn {
+            width: 100%;
+            margin-top: 16px;
         }
 
         /* FAIXA DE VALOR */
@@ -818,6 +909,33 @@
             font-size: 10px !important;
         }
 
+        /* PREÇO EM DESTAQUE */
+
+        .offer-card {
+            margin-top: 25px;
+            padding: 23px;
+            border: 1px solid #d8e8f8;
+            border-radius: 15px;
+            background: #f4f9ff;
+        }
+
+        .offer-card .old-price {
+            color: #7d8c9b;
+        }
+
+        .offer-card .new-price {
+            color: var(--blue);
+        }
+
+        .offer-card .price-saving {
+            color: #47647d;
+        }
+
+        .offer-card .btn {
+            width: 100%;
+            margin-top: 15px;
+        }
+
         /* PASSOS */
 
         .steps {
@@ -886,7 +1004,13 @@
         }
 
         .cta .btn {
-            min-height: 49px;
+            min-height: 51px;
+        }
+
+        .cta .price-box {
+            max-width: 400px;
+            margin: 24px auto;
+            text-align: left;
         }
 
         .cta-small {
@@ -968,7 +1092,7 @@
             font-size: 12px;
         }
 
-        /* RODAPÉ SEM BOTÃO FIXO */
+        /* RODAPÉ */
 
         .footer {
             padding: 32px 0 25px;
@@ -1180,6 +1304,10 @@
                 text-align: center;
             }
 
+            .price-box {
+                text-align: left;
+            }
+
             .hero-visual {
                 width: 100%;
                 max-width: 400px;
@@ -1276,10 +1404,6 @@
                 justify-content: flex-start;
             }
 
-            /* IMPORTANTE:
-               Não existe botão fixo de compra no fundo do ecrã.
-               O rodapé mantém o seu tamanho natural. */
-
             .footer {
                 padding-bottom: 25px;
             }
@@ -1340,6 +1464,22 @@
 
             .floating-note span {
                 font-size: 9px;
+            }
+
+            .price-box {
+                padding: 17px;
+            }
+
+            .old-price {
+                font-size: 17px;
+            }
+
+            .new-price {
+                font-size: 34px;
+            }
+
+            .price-line {
+                gap: 9px;
             }
 
             .cards {
@@ -1496,7 +1636,7 @@
 
     <main>
 
-        <!-- PÚBLICO, PROBLEMA E DESEJO -->
+        <!-- HERO -->
 
         <section class="hero" id="inicio">
             <div class="container hero-grid">
@@ -1514,30 +1654,58 @@
                     </h1>
 
                     <p>
-                        Educar uma criança nem sempre é simples.
-                        Perante uma birra, uma reação inesperada ou um
-                        comportamento difícil, compreender o que pode
-                        estar por detrás daquela atitude é um passo
-                        importante para refletir sobre como agir.
-                        <strong>Comece por olhar para além do comportamento.</strong>
+                        O seu filho tem birras, reage de forma inesperada
+                        ou apresenta comportamentos que nem sempre sabe
+                        como interpretar?
+
+                        Educar pode trazer dúvidas e desafios. Antes de
+                        reagir, compreender o que pode estar por detrás
+                        de um comportamento é um passo importante.
+                        <strong>Comece por olhar para além da atitude.</strong>
                     </p>
 
-                    <div class="hero-actions">
+                    <div class="price-box">
 
-                        <a href="#comprar" class="btn btn-primary">
-                            Quero conhecer o livro
+                        <span class="price-label">
+                            PREÇO PROMOCIONAL INDICADO
+                        </span>
+
+                        <div class="price-line">
+                            <span class="old-price">10.000 Kz</span>
+                            <span class="new-price">6.500 Kz</span>
+                            <span class="discount-badge">-35%</span>
+                        </div>
+
+                        <p class="price-saving">
+                            Poupe 3.500 Kz em relação ao preço de referência.
+                        </p>
+
+                        <p class="price-conditions">
+                            Confirme o preço e as condições finais na página
+                            de compra antes de efetuar o pagamento.
+                        </p>
+
+                        <a
+                            href="https://pay.kursinha.com/c/6acd3cc6244a0b3240f6e9fa"
+                            class="btn btn-primary buy-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            QUERO CONHECER O LIVRO
                             <span class="arrow">→</span>
-                        </a>
-
-                        <a href="#beneficios" class="btn btn-outline">
-                            Descobrir os benefícios
                         </a>
 
                     </div>
 
+                    <div class="hero-actions">
+                        <a href="#beneficios" class="btn btn-outline">
+                            Descobrir o que pode aprender
+                        </a>
+                    </div>
+
                     <p class="hero-note">
-                        <strong>Uma nova perspetiva.</strong>
-                        Conheça a proposta do livro e consulte as condições
+                        <strong>Uma decisão informada.</strong>
+                        Conheça a proposta e verifique os detalhes
                         antes de comprar.
                     </p>
 
@@ -1613,9 +1781,9 @@
                     </h2>
 
                     <p>
-                        Pais, professores e educadores enfrentam situações
-                        que exigem paciência, atenção e capacidade de
-                        compreender antes de reagir.
+                        Já tentou corrigir uma atitude e sentiu que
+                        continuava sem compreender o que estava a acontecer?
+                        Essa dúvida merece atenção.
                     </p>
 
                 </div>
@@ -1747,7 +1915,7 @@
             </div>
         </section>
 
-        <!-- RECURSO VISUAL 1: FAMÍLIA AFRICANA -->
+        <!-- FAMÍLIA -->
 
         <section class="visual-band">
             <div class="visual-grid">
@@ -1756,9 +1924,8 @@
 
                     <img
                         src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1400&q=85"
-                        alt="Família negra num momento de proximidade e convivência"
+                        alt="Família num momento de proximidade e convivência"
                         loading="lazy"
-                        referrerpolicy="no-referrer"
                     >
 
                 </div>
@@ -1884,7 +2051,7 @@
             </div>
         </section>
 
-        <!-- RECURSO VISUAL 2: APRENDIZAGEM -->
+        <!-- APRENDIZAGEM -->
 
         <section class="visual-band">
             <div class="visual-grid">
@@ -1917,7 +2084,6 @@
                         src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=85"
                         alt="Crianças num ambiente de aprendizagem"
                         loading="lazy"
-                        referrerpolicy="no-referrer"
                     >
 
                 </div>
@@ -2061,14 +2227,37 @@
 
                     </div>
 
-                    <a href="#comprar" class="btn btn-dark">
-                        Consultar as condições de compra
-                        <span class="arrow">→</span>
-                    </a>
+                    <div class="offer-card">
+
+                        <span class="price-label">
+                            PREÇO PROMOCIONAL INDICADO
+                        </span>
+
+                        <div class="price-line">
+                            <span class="old-price">10.000 Kz</span>
+                            <span class="new-price">6.500 Kz</span>
+                            <span class="discount-badge">-35%</span>
+                        </div>
+
+                        <p class="price-saving">
+                            Diferença de 3.500 Kz em relação ao preço de referência.
+                        </p>
+
+                        <a
+                            href="https://pay.kursinha.com/c/6acd3cc6244a0b3240f6e9fa"
+                            class="btn btn-dark buy-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            CONSULTAR E COMPRAR
+                            <span class="arrow">→</span>
+                        </a>
+
+                    </div>
 
                     <p class="small-note">
-                        O preço, o formato, o acesso e as condições efetivas
-                        devem ser confirmados na página de compra.
+                        Confirme o preço, o formato, o acesso e as condições
+                        efetivas na página de compra antes de pagar.
                     </p>
 
                 </div>
@@ -2153,23 +2342,47 @@
                     <p>
                         Se acredita que compreender melhor as crianças
                         é uma parte importante da educação, conheça
-                        o livro <strong>Compreender Antes de Corrigir</strong>
-                        e descubra se é o recurso que procura.
+                        o livro <strong>Compreender Antes de Corrigir</strong>.
+                        Descubra a proposta e avalie se este recurso
+                        faz sentido para si.
                     </p>
 
-                    <a
-                        href="https://pay.kursinha.com/c/6acd3cc6244a0b3240f6e9fa"
-                        class="btn btn-primary buy-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Aceder à página de compra
-                        <span class="arrow">→</span>
-                    </a>
+                    <div class="price-box">
+
+                        <span class="price-label">
+                            PREÇO PROMOCIONAL INDICADO
+                        </span>
+
+                        <div class="price-line">
+                            <span class="old-price">10.000 Kz</span>
+                            <span class="new-price">6.500 Kz</span>
+                            <span class="discount-badge">-35%</span>
+                        </div>
+
+                        <p class="price-saving">
+                            Poupe 3.500 Kz em relação ao preço de referência.
+                        </p>
+
+                        <a
+                            href="https://pay.kursinha.com/c/6acd3cc6244a0b3240f6e9fa"
+                            class="btn btn-primary buy-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            SIM, QUERO CONHECER O LIVRO
+                            <span class="arrow">→</span>
+                        </a>
+
+                        <p class="price-conditions">
+                            Confirme o preço final e as condições na página
+                            de compra.
+                        </p>
+
+                    </div>
 
                     <p class="cta-small">
-                        Consulte o preço, as condições e os detalhes
-                        antes de concluir a compra.
+                        Conheça a oferta. Esclareça as suas dúvidas.
+                        Tome a sua decisão com confiança.
                     </p>
 
                 </div>
@@ -2251,9 +2464,10 @@
                         </button>
 
                         <div class="faq-answer">
-                            O preço atual deve ser consultado na página
-                            da oferta da Kursinha, onde poderá verificar
-                            o valor antes de efetuar qualquer pagamento.
+                            Esta página apresenta o preço promocional indicado
+                            de 6.500 Kz e o preço de referência de 10.000 Kz.
+                            Confirme o valor final na página de compra antes
+                            de efetuar qualquer pagamento.
                         </div>
 
                     </article>
@@ -2324,7 +2538,7 @@
             </div>
         </section>
 
-        <!-- FRASE FINAL: SEM BOTÃO -->
+        <!-- FRASE FINAL -->
 
         <section class="final-section">
             <div class="container">
@@ -2344,7 +2558,7 @@
 
     </main>
 
-    <!-- RODAPÉ NORMAL: SEM BOTÃO DE COMPRA FIXO -->
+    <!-- RODAPÉ -->
 
     <footer class="footer">
         <div class="container">
@@ -2398,11 +2612,11 @@
 
                 <p class="footer-disclaimer">
                     Esta página tem finalidade informativa e promocional.
-                    A compra, o pagamento, o acesso ao produto e as condições
-                    comerciais são regidos pelas informações disponibilizadas
-                    na plataforma de venda. Os resultados da leitura e a
-                    aplicação dos conhecimentos podem variar de pessoa
-                    para pessoa.
+                    O preço promocional apresentado deve ser confirmado
+                    na plataforma de venda. A compra, o pagamento, o acesso
+                    ao produto e as condições comerciais são regidos pelas
+                    informações disponibilizadas na plataforma. Os resultados
+                    da leitura e a aplicação dos conhecimentos podem variar.
                 </p>
 
             </div>
@@ -2410,17 +2624,15 @@
         </div>
     </footer>
 
-    <!--
-        Não existe botão de compra fixo no fundo do ecrã.
-        Os botões estão integrados no conteúdo.
-        Isto evita que o rodapé ou o ecrã do telemóvel
-        fiquem ocupados por uma barra de compra.
-    -->
-
     <script>
         "use strict";
 
-        /* LINK DE AFILIADO */
+        /*
+         * LINK DE AFILIADO
+         *
+         * Confirma se este é o teu link de afiliado atual.
+         * Todos os botões de compra usam o endereço definido aqui.
+         */
 
         const BUY_URL =
             "https://pay.kursinha.com/c/6acd3cc6244a0b3240f6e9fa";
