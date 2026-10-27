@@ -51,15 +51,46 @@
             scroll-padding-top: 90px;
         }
 
+        html {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: clip;
+        }
+
         body {
             width: 100%;
-            min-width: 320px;
-            overflow-x: hidden;
+            max-width: 100%;
+            min-width: 0;
+            overflow-x: clip;
             background: var(--navy);
             color: var(--white);
             font-family: "DM Sans", sans-serif;
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
+        }
+
+        main,
+        header,
+        footer,
+        section,
+        .container,
+        .hero-grid,
+        .two-col,
+        .cards,
+        .benefits-grid,
+        .steps,
+        .faq-list {
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        /* Evita que palavras, botões ou elementos decorativos alarguem o ecrã */
+        h1, h2, h3, p, a, li, strong, span {
+            overflow-wrap: anywhere;
+        }
+
+        img, video, iframe {
+            max-width: 100%;
         }
 
         body.menu-open {
@@ -1210,6 +1241,45 @@
         /* TELEMÓVEIS */
 
         @media (max-width: 760px) {
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: clip;
+            }
+
+            .hero-grid,
+            .two-col,
+            .cards,
+            .benefits-grid,
+            .steps,
+            .value-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero-visual,
+            .book-frame,
+            .price-box,
+            .card,
+            .benefit,
+            .faq-item {
+                min-width: 0;
+                max-width: 100%;
+            }
+
+            .floating-note {
+                left: 8px;
+                max-width: min(178px, calc(100% - 16px));
+            }
+
+            .price-line {
+                min-width: 0;
+            }
+
+            .btn {
+                white-space: normal;
+            }
+
             html {
                 scroll-padding-top: 76px;
             }
